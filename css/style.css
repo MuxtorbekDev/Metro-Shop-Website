@@ -22,6 +22,9 @@ body {
   height: 100%;
   transition: .1s ease-in;
 }
+button {
+  cursor: pointer;
+}
 html {
   font-size: 75%;
 }
@@ -35,7 +38,8 @@ ul li {
   margin: 0 auto;
 }
 img {
-  width: 100%
+  width: 100%;
+  cursor: pointer;
 }
 
 /* Header section stayle */
@@ -431,11 +435,19 @@ main .main-page .page-text button {
   background: transparent;
   text-transform: uppercase;
   font-weight: bold;
-  border-bottom: .2rem solid var(--bg-grey)
+  border-bottom: .2rem solid var(--bg-grey);
+  position: relative;
 }
-main .main-page .page-text button:hover {
-  border-bottom: .2rem solid var(--black);
-  border-width: 50%;
+main .main-page .page-text button::before {
+  position: absolute;
+  content: '';
+  background: var(--black);
+  width: 20%;
+  bottom: 0;
+  height: .2rem;
+}
+main .main-page .page-text button:hover::before {
+  animation: bottomBefor .5s ease-in forwards;;
 }
 main .page-image {
   width: 50%;
@@ -449,6 +461,89 @@ main img {
   width: 30rem;
 }
 
+/* Instrument style */
+.instrument {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+}
+.instrument .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+.instrument .row .trend, .collec {
+  display: flex;
+  background-color: var(--bg-grey);
+  padding: 3rem 3rem 0rem 4rem ;
+  gap: 2rem;
+  width: 50%;
+  height: 30rem;
+}
+.instrument .row .trend {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.instrument .row .trend .image {
+  padding-left: 5rem;
+}
+.instrument .row h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.instrument .row button {
+  background: transparent;
+  padding: 1rem 4rem 1rem 0rem;
+  border: none;
+  font-size: 1.7rem;
+  padding-bottom: .5rem;
+  position: relative;
+}
+.instrument .row button::before {
+  position: absolute;
+  content: " ";
+  width: 10%;
+  height: .3rem;
+  bottom: 0;
+  color: var(--black);
+  background-color: var(--black);
+  border-radius: 2rem;
+}
+.instrument .row .trend:hover button::before {
+  animation: bottomBefor 1s ease-in forwards;
+}
+.instrument .row .collec:hover button::before {
+  animation: bottomBefor2 1s ease-in forwards;
+}
+.instrument .row .collec:hover img {
+  transition: .5s ease-in transform ;
+  transform:scale(1.1)
+}
+.instrument .row .trend:hover img {
+  transition: .5s ease-in transform ;
+  transform:scale(1.1)
+}
+
+@keyframes bottomBefor {
+  100% {
+    width: 140%;
+  }
+}
+@keyframes bottomBefor2 {
+  100% {
+    width: 120%;
+  }
+}
+
+.instrument .row .collec .text {
+  margin-left: 1rem;
+  margin-top: 15rem;
+}
+.instrument img {
+  width: 100%;
+}
 
 
 
@@ -543,6 +638,12 @@ main img {
     margin-right: 3rem;
   }
 
+  .instrument .row .image {
+    width: 20rem;
+  }
+  .instrument .row button {
+    padding: 1rem 1rem 1rem 0rem;
+  }
 }
 
 
@@ -592,7 +693,23 @@ main img {
   main img {
     width: 15rem;
   }
-  
+  .instrument .row {
+    flex-direction: column;
+  }
+  .instrument .row .trend, .collec {
+    width: 100%;
+  }
+  .instrument .row .trend {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .instrument .row  .collec {
+    justify-content: space-between
+  }
+  .instrument .row button {
+    padding: 1rem 0rem 1rem 0rem;
+  }
 }
 @media (max-width: 550px) {
   html {
