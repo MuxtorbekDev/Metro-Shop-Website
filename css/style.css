@@ -23,7 +23,7 @@ body {
   transition: .1s ease-in;
 }
 html {
-  font-size: 80%;
+  font-size: 75%;
 }
 ul li {
   display: inline-block;
@@ -333,6 +333,7 @@ header .search {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  padding-bottom: 3rem;
 }
 header .search .categories {
   width: 18rem;
@@ -398,6 +399,60 @@ header .search  .input input[type="search"] {
   border-right: var(--border);
   width: 100%;
 }
+/* Main stayle */
+main {
+  width: 100%;
+  background-color: var(--bg-grey)
+}
+main .main-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+}
+main .main-page .page-text h3 {
+  font-size: 1.7rem;
+  line-height: 3rem;
+  font-weight: 500;
+}
+main .main-page .page-text h1 {
+  font-size: 4rem;
+  line-height: 5rem;
+  padding: 2rem 0;
+}
+main .main-page .page-text p {
+  font-size: 1.5rem;
+  width: 70%;
+}
+main .main-page .page-text button {
+  margin-top: 3rem;
+  padding: 1rem 0;
+  border: none;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: .2rem solid var(--bg-grey)
+}
+main .main-page .page-text button:hover {
+  border-bottom: .2rem solid var(--black);
+  border-width: 50%;
+}
+
+main img {
+  width: 30rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 990px) {
   html {
@@ -414,8 +469,15 @@ header .search  .input input[type="search"] {
   }
   header nav .nav-menu.block {
     display: block;
+    background-color: var(--oq-color);
+    z-index: 555;
   }
 
+  main .page-image {
+    text-align: center;
+    align-content: center;
+    width: 40%;
+  }
   header nav .nav-Icon span {
     display: none;
   }
@@ -466,6 +528,15 @@ header .search  .input input[type="search"] {
     align-items: center;
     border-top: 1px solid #bbb;
   }
+  main .main-page .page-text p {
+    font-size: 1.4rem;
+    width: 80%;
+  }
+    
+  main img {
+    width: 20rem;
+    margin-right: 3rem;
+  }
 
 }
 
@@ -474,6 +545,53 @@ header .search  .input input[type="search"] {
   html {
     font-size: 65%;
   }
+  main {
+    width: 100%;
+    background-color: var(--bg-grey)
+  }
+  main .main-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+  }
+  main .main-page .page-text h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  main .main-page .page-text h1 {
+    font-size: 2.5rem;
+    padding: .5rem 0;
+  }
+  main .main-page .page-text p {
+    font-size: 1.5rem;
+  }
+  main .main-page .page-text button {
+    margin-top: .5rem;
+    border-bottom: .2rem solid var(--bg-grey)
+  }
+  main .main-page .page-text button:hover {
+    border-bottom: .2rem solid var(--black);
+    border-width: 50%;
+  }
+
+  main .page-image {
+    text-align: center;
+    align-content: center;
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  main .main-page .page-text p {
+    font-size: 1.3rem;
+    width: 90%;
+  }
+  
+  main img {
+    width: 15rem;
+  }
+  
 }
 @media (max-width: 550px) {
   html {
