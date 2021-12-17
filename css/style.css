@@ -437,7 +437,14 @@ main .main-page .page-text button:hover {
   border-bottom: .2rem solid var(--black);
   border-width: 50%;
 }
-
+main .page-image {
+  width: 50%;
+  background-color: #ebebeb;
+  border-radius: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 main img {
   width: 30rem;
 }
@@ -474,8 +481,6 @@ main img {
   }
 
   main .page-image {
-    text-align: center;
-    align-content: center;
     width: 40%;
   }
   header nav .nav-Icon span {
@@ -576,12 +581,8 @@ main img {
   }
 
   main .page-image {
-    text-align: center;
-    align-content: center;
     width: 30%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+
   }
   main .main-page .page-text p {
     font-size: 1.3rem;
