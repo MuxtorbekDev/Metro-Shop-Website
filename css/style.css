@@ -551,12 +551,122 @@ main img {
 }
 
 
+/* Featured Section style */
+.featured {
+  width: 100%;
+  padding: 3rem 1rem;
+}
 
 
+.keybo {
+  grid-area: keybo;
+}
+.sbeaker {
+  grid-area: sbeaker;
+}
+.headphone {
+  grid-area: headphone;
+}
+.ultra {
+  grid-area: ultra;
+}
+.bluet {
+  grid-area: bluet;
+}
+.gadg {
+  grid-area: gadg;
+}
+.habby {
+  grid-area: habby;
+}
+.graph {
+  grid-area: graph;
+}
+.featured .text h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
 
+.featured .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "game game keybo sbeaker"
+  "game game headphone ultra"
+  "bluet gadg habby graph"
+  ;
+  gap: 1.5rem;
+  overflow: hidden;
 
+}
+.featured .grid  div {
+  position: relative;
+  padding: 1px;
+}
+.featured .grid  div .text {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 2rem;
+  transition: .4s ease-in;
+}
+.featured .grid  div .text.bottom2 {
+  bottom: 4.5rem;
+}
+.featured .grid  div .text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+.featured .grid  div .text h3:hover {
+  color: var(--black);
+}
+.featured .grid  div .text s, 
+.featured .grid  div .text span {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.featured .grid  div .text s {
+  color: var(--color-text);
+}
+.featured .grid  div  sup {
+  position: absolute;
+  font-weight: 1.4rem;
+  top: 1rem;
+  left: 1rem;
+  background-color: var(--black);
+  padding: .5rem;
+  color: var(--oq-color);
+  border-radius: .3rem;
+}
+.featured .grid  div .text button {
+  border: none;
+  background: var(--black);
+  color: var(--oq-color);
+  padding: .7rem 1.3rem;
+  border-radius: .5rem;
+  position: absolute;
+  bottom: -10rem;
+  left: 0rem;
+  transition: .2s ease-in;
+}
+.featured .grid  div .text button.bottom3 {
+  bottom: -3rem;
+}
 
-
+@keyframes btn {
+  0% {
+    bottom: -10rem;
+  }
+  100% {
+    bottom: -3rem;
+  }
+}
+.game  {
+  grid-area: game;
+}
 
 
 
@@ -653,6 +763,22 @@ main img {
   .instrument .row button {
     padding: 1rem 1rem 1rem 0rem;
   }
+  .featured {
+    padding: 3rem;
+  }
+  .featured .grid {
+    padding: 0 3rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "game game"
+    "game game"
+    "keybo sbeaker"
+    "headphone ultra"
+    "bluet gadg"
+    "habby graph"
+    ;
+  }
 }
 
 
@@ -718,6 +844,11 @@ main img {
   }
   .instrument .row button {
     padding: 1rem 0rem 1rem 0rem;
+  }
+  .featured .grid {
+    padding: 0 2.5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
   }
 }
 @media (max-width: 550px) {
