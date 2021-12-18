@@ -31,7 +31,7 @@ html {
 ul li {
   display: inline-block;
   list-style: none;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 .container {
   width: 85%;
@@ -670,6 +670,51 @@ main img {
 
 
 
+/* SignUp section style  */
+.signup {
+  width: 100%;
+  padding: 5rem 0;
+}
+.sign {
+  width: 100%;
+  background: var(--bg-grey);
+  text-align: center;
+  padding: 7rem 0;
+}
+.sign h2 {
+  font-size: 2.7rem;
+  font-weight: 500;
+  line-height: 3rem;
+}
+.sign p {
+  font-size: 1.3rem;
+  line-height: 4rem;
+  color: var(--primary-color)
+}
+.sign .input-box {
+  width: 100%;
+  padding: 1.7rem 0 .5rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem
+}
+.sign .input-box input {
+  height: 4.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  border-radius: .35rem;
+  box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.1);
+}
+.sign .input-box input:nth-child(1) {
+  width: 50%;
+  padding-left: 2rem;
+}
+.sign .input-box input:nth-child(2) {
+  padding: 0 4rem;
+  background-color: var(--black);
+  color: var(--oq-color)
+}
 
 @media (max-width: 990px) {
   html {
@@ -846,9 +891,20 @@ main img {
     padding: 1rem 0rem 1rem 0rem;
   }
   .featured .grid {
-    padding: 0 2.5rem;
+    padding: 0;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(9, 1fr);
+    grid-template-areas: 
+    "game"
+    "keybo"
+    "sbeaker"
+    "headphone"
+    "ultra"
+    "bluet"
+    "gadg"
+    "habby"
+    "graph"
+    ;
   }
 }
 @media (max-width: 550px) {
