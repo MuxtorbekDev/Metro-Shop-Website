@@ -49,15 +49,16 @@ header{
 }
 header nav {
   display: flex;
-  width: 100%;
+  width: 85%;
+  margin: 0 auto;
   justify-content: space-between;
-  padding: 0 3rem;
 
 }
 header nav.fix-nav {
   position: fixed;
   top: 0;
   left: 0;
+  padding: 0 5rem;
   width: 100%;
   box-shadow: 0 5px 15px rgba(0,0,0, .2);
   z-index: 999999;
@@ -1089,6 +1090,10 @@ footer .footer .card img {
     border-bottom: .2rem solid var(--black);
     border-width: 50%;
   }
+  main {
+    padding-top: 3rem;
+  
+    }
 
   main .page-image {
     width: 30%;
