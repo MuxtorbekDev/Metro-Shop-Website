@@ -716,6 +716,79 @@ main img {
   color: var(--oq-color)
 }
 
+
+/* Posts section style */
+section.posts {
+  width: 100%;
+  padding: 3rem 1.5rem;
+  padding-bottom: 6rem;
+}
+.posts .posts-text {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+}
+.posts .posts-text h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+section.posts .row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+section.posts .row .box .box-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.row .box .box-image img {
+  border-radius: 1rem;
+}
+.row .box .box-image:hover img{
+  transform:rotateZ(3deg) scale(1.05);
+  transition: .4s ease-in transform;
+
+}
+.row .box .box-image:hover span {
+  background-color: var(--black);
+  color: var(--oq-color);
+  transition: .4s ease-in;
+}
+.box .box-image span {
+  position: absolute;
+  background: var(--oq-color);
+  padding: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  border-radius: 50%;
+  text-align: center;
+}
+.box .box-image span p {
+  font-size: 1.3rem;
+}
+.box .box-image span h4 {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.box .box-text {
+  padding: 1rem 0;
+}
+.box .box-text p {
+  font-size: 1.35rem;
+  color: var(--color-text);
+  line-height: 2rem;
+}
+.box .box-text h3 {
+  font-size: 1.9rem;
+  line-height: 2.5rem
+}
+
+
+
+
+
 @media (max-width: 990px) {
   html {
     font-size: 70%;
@@ -905,6 +978,10 @@ main img {
     "habby"
     "graph"
     ;
+  }
+  section.posts .row {
+    display: flex;
+    flex-direction: column
   }
 }
 @media (max-width: 550px) {
