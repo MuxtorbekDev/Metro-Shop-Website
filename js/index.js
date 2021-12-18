@@ -87,3 +87,35 @@ hoverBottomAdd(".featured .gadg", ".gadg .text button", ".gadg .text");
 hoverBottomAdd(".featured .graph", ".graph .text button", ".graph .text");
 hoverBottomAdd(".featured .bluet", ".bluet .text button", ".bluet .text");
 hoverBottomAdd(".featured .habby", ".habby .text button", ".habby .text");
+
+// Footer year
+const footerYear = document.querySelector("footer .footer p span");
+footerYear.innerHTML = new Date().getFullYear();
+
+// Nav fixd
+const navBar = document.querySelector("header nav");
+const navHeight = navBar.getBoundingClientRect().height;
+const body = document.querySelector("body");
+window.addEventListener("scroll", () => {
+  const scrollHeight = window.pageYOffset;
+  console.log();
+  if (scrollHeight > navHeight + 400) {
+    navBar.classList.add("fix-nav");
+  } else {
+    navBar.classList.remove("fix-nav");
+  }
+});
+
+// scroll top go
+const scrollTopIcon = document.querySelector(".fixd-icon");
+
+window.onscroll = () => {
+  if (window.scrollY > 500) {
+    scrollTopIcon.classList.remove("iconbottom");
+  } else if (window.scrollY < 500) {
+    scrollTopIcon.classList.add("iconbottom");
+  }
+};
+scrollTopIcon.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+});
